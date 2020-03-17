@@ -14,7 +14,7 @@ const mongoose = require("mongoose");
 var app = express();
 
 // view engine setup
-require('dotenv').config()
+// require('dotenv').config()
 
 // app.engine('html', require('ejs').renderFile);
 
@@ -35,7 +35,7 @@ app.use('/api/users', user);
 
 // mongoose uri
 
-const db =  process.env.mongoURI;
+const db =  "mongodb+srv://Mega:mega12345@cluster0-nof7e.mongodb.net/test?retryWrites=true&w=majority";
 
 // Connect to mongoose
 console.log(db)
