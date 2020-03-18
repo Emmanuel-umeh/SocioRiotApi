@@ -23,26 +23,26 @@ router.post("/", (req, res) => {
   // }
 
   const {
-    firstName,
-    lastName,
+    // firstName,
+    // lastName,
     email,
     password,
-    companyName,
-    companyType,
-    industry,
-    country
+    // companyName,
+    // companyType,
+    // industry,
+    // country
   } = req.body;
 
   // Simple validation
   if (
-    !firstName ||
-    !lastName ||
+    // !firstName ||
+    // !lastName ||
     !email ||
-    !password ||
-    !companyName ||
-    !companyType ||
-    !industry ||
-    !country
+    !password 
+    // !companyName ||
+    // !companyType ||
+    // !industry ||
+    // !country
   ) {
     return res.status(400).json({ msg: "Please enter all fields" });
   }
@@ -53,14 +53,14 @@ router.post("/", (req, res) => {
 
     const newUser = new User({
       local: {
-        firstName,
-        lastName,
+        // firstName,
+        // lastName,
         email,
         password,
-        companyName,
-        companyType,
-        industry,
-        country
+        // companyName,
+        // companyType,
+        // industry,
+        // country
       }
     });
 
@@ -81,11 +81,11 @@ router.post("/", (req, res) => {
                 user: {
                   id: user.id,
                
-                  firstName: user.local.firstName,
-                  lastName: user.local.lastName,
+                  // firstName: user.local.firstName,
+                  // lastName: user.local.lastName,
                   email: user.local.email,
-                  companyName: user.local.companyName,
-                  companyType: user.local.companyType
+                  // companyName: user.local.companyName,
+                  // companyType: user.local.companyType
                 }
               });
             }
